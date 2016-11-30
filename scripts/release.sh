@@ -20,7 +20,3 @@ git merge --no-ff --no-edit develop
 # 3. commit package.json (et al.) and CHANGELOG.md
 # 4. tag a new release
 node_modules/standard-version/cli.js -- --standard-version
-
-# bring develop up to date with latest master branch and its just updated version number
-git checkout develop
-git merge --no-ff --no-edit master
