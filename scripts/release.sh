@@ -19,4 +19,4 @@ git merge --no-ff --no-edit develop
 # 2. use conventional-changelog to update CHANGELOG.md
 # 3. commit package.json (et al.) and CHANGELOG.md
 # 4. tag a new release
-node node_modules/standard-version/index.js
+node_modules/standard-version/cli.js -- --standard-version
