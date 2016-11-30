@@ -1,6 +1,6 @@
 {
   "name": "plirono-merchant-app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Kostis Maninakis",
   "homepage": "http://plirono.com/",
   "private": true,
@@ -8,7 +8,7 @@
     "postinstall": "scripts/postinstall.sh",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
-    "release": "scripts/release.sh"
+    "release": "standard-version"
   },
   "dependencies": {
     "@angular/common": "2.1.1",
