@@ -4,8 +4,10 @@
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
+    "postinstall": "scripts/postinstall.sh",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "release": "scripts/release.sh"
   },
   "dependencies": {
     "@angular/common": "2.1.1",
@@ -30,6 +32,8 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "0.0.45",
+    "angular-precommit": "^1.0.3",
+    "standard-version": "^3.0.0",
     "typescript": "2.0.6"
   },
   "description": "ionic2-PWA-test: An Ionic project",
