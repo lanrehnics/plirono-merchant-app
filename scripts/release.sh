@@ -4,16 +4,14 @@
 git add -A
 git stash
 
-# update master and develop branches with their latest state from origin
-git checkout master
-git pull origin master
+# update develop and master branches with their latest state from origin
 git checkout develop
 git pull origin develop
+git checkout master
+git pull origin master
 
 # bring master up to date with latest develop branch
-git merge master
-git checkout master
-git merge --no-ff develop
+git merge --no-ff --no-edit develop
 
 # TODO run tests
 
