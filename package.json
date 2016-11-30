@@ -1,7 +1,8 @@
 {
-  "name": "ionic2-pwa-test",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "plirono-merchant-app",
+  "version": "0.0.1",
+  "author": "Kostis Maninakis",
+  "homepage": "http://plirono.com/",
   "private": true,
   "scripts": {
     "postinstall": "scripts/postinstall.sh",
