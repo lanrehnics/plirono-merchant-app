@@ -2,11 +2,13 @@ const express 		= require('express');
 const compression = require('compression');
 const path 				= require('path');
 const bodyParser 	= require('body-parser');
+const connect_cache = require('connect-cache');
 
 
 const app 				= express();
 const oneHour 		= 3600000; // 3600000msec == 1hour
 
+app.use(connect_cache({rules: [{regex: /.*/, ttl: oneHour }]}));  // Server-side file caching
 app.use(compression({ level: 5 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
