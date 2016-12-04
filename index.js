@@ -1,11 +1,11 @@
-var express = require('express');
-var compression = require('compression');
-var path = require('path');
-var bodyParser = require('body-parser');
+const express 		= require('express');
+const compression = require('compression');
+const path 				= require('path');
+const bodyParser 	= require('body-parser');
 
 
-var app = express();
-var oneHour = 3600000; // 3600000msec == 1hour
+const app 				= express();
+const oneHour 		= 3600000; // 3600000msec == 1hour
 
 app.use(compression({ level: 5 }));
 app.use(bodyParser.json());
