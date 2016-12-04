@@ -1,12 +1,12 @@
-const express 		= require('express');
-const compression = require('compression');
-const path 				= require('path');
-const bodyParser 	= require('body-parser');
+const express 			= require('express');
 const connect_cache = require('connect-cache');
+const compression 	= require('compression');
+const path 					= require('path');
+const bodyParser 		= require('body-parser');
 
 
-const app 				= express();
-const oneHour 		= 3600000; // 3600000msec == 1hour
+const app 					= express();
+const oneHour 			= 3600000; // 3600000msec == 1hour
 
 app.use(connect_cache({rules: [{regex: /.*/, ttl: oneHour }]}));  // Server-side file caching
 app.use(compression({ level: 5 }));
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('www', { maxAge: oneHour })); // Client-side file caching
 
-/* Allow fetching of additional external resouces. Warning: Possible security risk */
+/* Allow fetching of additional external resouces. Warning: Possible security risk! */
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
