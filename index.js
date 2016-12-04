@@ -1,13 +1,13 @@
-var express     = require('express');
+var express = require('express');
 var compression = require('compression');
-var path        = require('path');
-var bodyParser  = require('body-parser');
+var path = require('path');
+var bodyParser = require('body-parser');
 
 
-var app         = express();
-var oneHour     = 3600000;  // 3600000msec == 1hour
+var app = express();
+var oneHour = 3600000; // 3600000msec == 1hour
 
-app.use(compression({level: 5}));
+app.use(compression({ level: 5 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('www', { maxAge: oneHour })); // Client-side file caching
@@ -24,4 +24,4 @@ app.get('/', function(req, res) {
 });
 
 
-app.listen(80);
+app.listen(8080);
