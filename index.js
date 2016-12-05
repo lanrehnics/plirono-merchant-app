@@ -7,12 +7,13 @@ const bodyParser 		= require('body-parser');
 
 const app 					= express();
 const oneHour 			= 3600000; // 3600000msec == 1hour
+const oneMinute			= 60000;			// 60000 == 1 minute
 
-app.use(cache({rules: [{regex: /.*/, ttl: oneHour }]})); // Server-side file caching
 app.use(compression({ level: 5 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('www', { maxAge: oneHour })); // Client-side file caching
+app.use(cache({rules: [{regex: /.*/, ttl: oneMinute }]})); // Server-side file caching
 
 /* Allow fetching of additional external resouces. Warning: Possible security risk! */
 app.use(function(req, res, next) {
