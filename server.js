@@ -1,6 +1,5 @@
 const express       = require('express');
 const compression   = require('compression');
-const path          = require('path');
 const bodyParser    = require('body-parser');
 
 
@@ -21,7 +20,7 @@ server.use(function(req, res, next) {
 });
 
 server.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'));
+  res.sendFile(__dirname + '/index.html');
 });
 
 
