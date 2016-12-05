@@ -23,7 +23,6 @@
     "@ionic/storage": "1.1.6",
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
-    "connect-cache": "^0.2.1",
     "express": "^4.14.0",
     "ionic-angular": "2.0.0-rc.3",
     "ionic-native": "2.2.3",
