@@ -1,3 +1,9 @@
+/*
+ * Strict Mode prevents certain actions from being taken and throws more exceptions.
+ * http://stackoverflow.com/a/1335881/5015955
+ */
+'use strict';
+
 const express       = require('express');
 const compression   = require('compression');
 
