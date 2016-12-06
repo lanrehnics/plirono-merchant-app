@@ -1,0 +1,39 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Signup</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="signup-page" scrollbar-y-auto padding>
+	<div class="logo">
+		<img src="assets/img/logo/logo-iconOnly-noPadding-transparentBG-icon.png" alt="Plirono logo">
+	</div>
+
+	<form #signupForm="ngForm" novalidate center-column>
+		<ion-list no-lines>
+			<ion-item>
+				<ion-label floating color="primary">Username</ion-label>
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p [hidden]="username.valid || submitted == false" ion-text color="danger" padding-left>
+				Username is required
+			</p>
+
+			<ion-item>
+				<ion-label floating color="primary">Password</ion-label>
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
+				</ion-input>
+			</ion-item>
+			<p [hidden]="password.valid || submitted == false" ion-text color="danger" padding-left>
+				Password is required
+			</p>
+		</ion-list>
+		<button ion-button (click)="onSignup(signupForm)" type="submit" block margin-top>Create</button>
+	</form>
+</ion-content>

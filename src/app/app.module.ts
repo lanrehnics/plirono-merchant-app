@@ -1,24 +1,38 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
+import { AboutPage } from './../pages/about/about.page';
+import { DashboardPage } from './../pages/dashboard/dashboard.page';
+import { LoginPage } from './../pages/login/login.page';
+import { SignupPage } from './../pages/signup/signup.page';
+import { UserDataProvider } from './../providers/user-data.provider';
+import { PlironoMerchantApp } from './app';
+
+import { ErrorHandler, NgModule } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
 
 @NgModule({
   declarations: [
-    MyApp,
-    Page1,
-    Page2
+    PlironoMerchantApp,
+    AboutPage,
+    DashboardPage,
+    LoginPage,
+    SignupPage,
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(PlironoMerchantApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    Page1,
-    Page2
+    PlironoMerchantApp,
+    AboutPage,
+    DashboardPage,
+    LoginPage,
+    SignupPage,
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    UserDataProvider,
+    Storage,
+  ],
 })
 export class AppModule {}
