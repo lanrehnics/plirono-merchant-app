@@ -20,3 +20,6 @@ git merge --no-ff --no-edit develop
 # 3. commit package.json (et al.) and CHANGELOG.md
 # 4. tag a new release
 node_modules/standard-version/cli.js -- --standard-version
+
+# fix gitlab links to be http instead of https
+sed -i "s/https:\/\/gitlab\.omnixell\.com/http:\/\/gitlab\.omnixell\.com/g" CHANGELOG.md
