@@ -28,6 +28,10 @@
   margin-right: auto;
 }
 
+[prn-bg-light] {
+  background-color: color($colors, light) !important;
+}
+
 .list-header-md {
     margin-bottom: 0 !important;
 }
