@@ -34,6 +34,10 @@
 				Password is required
 			</p>
 		</ion-list>
-		<button ion-button (click)="onSignup(signupForm)" type="submit" block margin-top>Create</button>
+		<ion-row responsive-sm margin-top>
+      <ion-col>
+				<button ion-button (click)="onSignup(signupForm)" type="submit" block>Create</button>
+      </ion-col>
+    </ion-row>
 	</form>
 </ion-content>
