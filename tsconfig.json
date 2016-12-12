@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "declaration": false,
     "noImplicitAny": true,
+    "alwaysStrict": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
