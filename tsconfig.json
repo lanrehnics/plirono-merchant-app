@@ -3,7 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "declaration": false,
     "noImplicitAny": true,
-    "alwaysStrict": true,
+    //"alwaysStrict": true, // TODO enable for TS > 2.1.x 
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
