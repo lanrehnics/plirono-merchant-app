@@ -15,17 +15,50 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-[scrollbar-y-auto] .scroll-content {
+[prn-scrollbar-y-auto] .scroll-content {
   overflow-y: auto !important;
 }
 
-[center-column] {
-  max-width: 560px;
+[prn-column-center] {
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+[prn-bg-light] {
+  background-color: color($colors, light) !important;
+}
+
+[prn-shadow-none] {
+    box-shadow: none;
+}
+
+[prn-max-width-sm] {
+  max-width: 475px;
+}
+
+[prn-max-width-xs] {
+  max-width: 360px;
+}
+
+/* apply to a container to flex all its children towards the center */
+[prn-flex-center] {
+  display: flex;
+  justify-content: center;
+}
+
 .list-header-md {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+p {
+  font-size: 1.1em;
+}
+
+.item-md {
+  padding-right: 16px;
 }
