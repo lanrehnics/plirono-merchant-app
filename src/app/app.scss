@@ -32,6 +32,10 @@
   background-color: color($colors, light) !important;
 }
 
+[prn-shadow-none] {
+    box-shadow: none;
+}
+
 [prn-max-width-sm] {
   max-width: 475px;
 }
