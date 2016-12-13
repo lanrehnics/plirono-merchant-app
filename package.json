@@ -34,7 +34,7 @@
     "@ionic/app-scripts": "0.0.45",
     "angular-precommit": "^1.0.3",
     "standard-version": "^3.0.0",
-    "typescript": "2.0.6"
+    "typescript": "2.1.4"
   },
   "description": "Plirono Merchant App: Power-up your Plirono experience!"
 }
