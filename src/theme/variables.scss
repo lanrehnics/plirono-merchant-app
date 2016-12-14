@@ -16,10 +16,12 @@ $colors: (
   secondary:  #00af3d,
   danger:     #ff1d00,
   light:      #f3fafd,
-  lightgray:  #d9e0e3,
-  darkgray:   #697072,
   dark:       #081620,
-  favorite:   #ffa500
+  favorite:   #ffa500,
+
+  lightgray:  #d9e0e3,
+  midgray:    #77797f,
+  darkgray:   #333
 );
 
 
@@ -32,7 +34,6 @@ $colors: (
 
 $text-color:        #081620;
 $background-color:  #fff;
-$headings-font-weight: 300;
 
 
 // App iOS Variables
