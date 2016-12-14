@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "postinstall": "scripts/postinstall.sh",
-    "build": "ionic-app-scripts build",
-    "serve": "ionic-app-scripts serve",
+    "build": "rm -rf www && ionic-app-scripts build --copy config/copy.config.js",
+    "serve": "rm -rf www && ionic-app-scripts serve --copy config/copy.config.js",
     "release": "scripts/release.sh",
     "node-clear": "rm -rf node_modules"
   },
