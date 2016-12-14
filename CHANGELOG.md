@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](http://gitlab.omnixell.com/maninak/plirono-merchant-app/compare/v0.2.1...v0.3.0) (2016-12-13)
+
+
+### Bug Fixes
+
+* buttons in LoginPage and SignUp page are now aligned ([911c513](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/911c513))
+* buttons in LoginPage, AboutPage, SignUpPage now have max-width ([f7a2e7b](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/f7a2e7b))
+* cards in LoginPage, SignUpPage now have more room for content ([d18e7e9](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/d18e7e9))
+* **AboutPage:** now has lighter background-color behind logo ([e217e20](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/e217e20))
+* **buttons:** buttons on top of cards now have no shadow ([3cdb7ba](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/3cdb7ba))
+* **center-column:** content marked as such is now standard 780px max-width ([d0a7379](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/d0a7379))
+* **design:** p elements now have slightly larger font-size ([d68f5d1](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/d68f5d1))
+* **logo:** in LoginPage, SignUpPage is now centered vertically ([4795fd3](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/4795fd3))
+* **logo:** plirono logo in LoginPage and SignupPage is now smaller ([f4cece4](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/f4cece4))
+
+
+### Features
+
+* forms in LoginPage and SignupPage are now over a card ([1dc91af](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/1dc91af))
+* **design:** background is now light only when  attr is present ([1f69851](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/1f69851))
+* **ion-item:** padding now is centered latterally in material design ([6f8765b](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/6f8765b))
+
+
+### Performance Improvements
+
+* **banner:** plirono banner in AboutPage is now minified ([f75455b](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/f75455b))
+* **logo:** now is an svg instead of a png ([892267d](http://gitlab.omnixell.com/maninak/plirono-merchant-app/commit/892267d))
+
+
+
 <a name="0.2.1"></a>
 ## [0.2.1](http://gitlab.omnixell.com/maninak/plirono-merchant-app/compare/v0.2.0...v0.2.1) (2016-12-07)
 
