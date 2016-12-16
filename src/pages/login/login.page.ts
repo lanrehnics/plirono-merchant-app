@@ -11,15 +11,15 @@ import { NavController } from 'ionic-angular';
   templateUrl:  'login.page.html',
 })
 export class LoginPage {
-  public login: {username?: string, password?: string} = {};
-  public submitted: boolean = false;
+  login: {username?: string, password?: string} = {};
+  submitted: boolean = false;
 
-  public constructor(
-      public navCtrl: NavController,
-      public userDataProvider: UserDataProvider,
+  constructor(
+      private navCtrl: NavController,
+      private userDataProvider: UserDataProvider,
   ) {}
 
-  public onLogin(form: NgForm): void {
+  onLogin(form: NgForm): void {
     this.submitted = true;
     if (form.valid) {
       this.userDataProvider.login(this.login.username);
@@ -27,7 +27,7 @@ export class LoginPage {
     }
   }
 
-  public onSignup(): void {
+  onSignup(): void {
     this.navCtrl.setRoot(SignupPage);
   }
 }

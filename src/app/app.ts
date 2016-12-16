@@ -16,32 +16,32 @@ import { Events, MenuController, Nav, Platform } from 'ionic-angular';
 export class PlironoMerchantApp {
   // the root nav is a child of the root app component
   // @ViewChild(Nav) gets a reference to the app's root nav
-  @ViewChild(Nav) public nav: Nav;
+  @ViewChild(Nav) nav: Nav;
 
   // List of pages that can be navigated to from the left menu
   // the left menu only works after login
   // the login page disables the left menu
-  public loggedInAppPages: IPage[] = [
+  loggedInAppPages: IPage[] = [
     { title: 'Dashboard', component: DashboardPage, icon: 'home'},
     { title: 'About', component: AboutPage, icon: 'information-circle' },
   ];
-  public loggedInAccountPages: IPage[] = [
+  loggedInAccountPages: IPage[] = [
     { title: 'Logout', component: LoginPage, icon: 'log-out', logsOut: true },
   ];
-  public loggedOutAppPages: IPage[] = [
+  loggedOutAppPages: IPage[] = [
     { title: 'About', component: AboutPage, icon: 'information-circle' },
   ];
-  public loggedOutAccountPages: IPage[] = [
+  loggedOutAccountPages: IPage[] = [
     { title: 'Login', component: LoginPage, icon: 'log-in' },
     { title: 'Signup', component: SignupPage, icon: 'person-add' },
   ];
-  public rootPage: Component;
+  rootPage: Component;
 
-  public constructor(
-      public events           : Events,
-      public userDataProvider : UserDataProvider,
-      public MenuController   : MenuController,
-      public storage          : Storage,
+  constructor(
+      private events           : Events,
+      private userDataProvider : UserDataProvider,
+      private MenuController   : MenuController,
+      private storage          : Storage,
   ) {
     // Decide which menu items should be hidden by current login status stored in local storage
     this.userDataProvider.hasLoggedIn()
@@ -58,7 +58,7 @@ export class PlironoMerchantApp {
     this.listenToLoginEvents();
   }
 
-  public openPage(page: IPage): void {
+  openPage(page: IPage): void {
     // the nav component was found using @ViewChild(Nav)
     // reset the nav to remove previous pages and only have this page
     // we wouldn't want the back button to show in this scenario
@@ -75,7 +75,7 @@ export class PlironoMerchantApp {
     }
   }
 
-  public listenToLoginEvents(): void {
+  listenToLoginEvents(): void {
     this.events.subscribe('user:login', () => {
       this.enableMenu(true);
     });
@@ -89,7 +89,7 @@ export class PlironoMerchantApp {
     });
   }
 
-  public enableMenu(loggedIn: boolean): void {
+  enableMenu(loggedIn: boolean): void {
     this.MenuController.enable(loggedIn, 'loggedInMenu');
     this.MenuController.enable(!loggedIn, 'loggedOutMenu');
   }

@@ -10,15 +10,15 @@ import { NavController } from 'ionic-angular';
   templateUrl:  'signup.page.html',
 })
 export class SignupPage {
-  public signup: {username?: string, password?: string} = {};
-  public submitted: boolean = false;
+  signup: {username?: string, password?: string} = {};
+  submitted: boolean = false;
 
-  public constructor(
-      public navCtrl: NavController,
-      public userDataProvider: UserDataProvider,
+  constructor(
+      private navCtrl: NavController,
+      private userDataProvider: UserDataProvider,
   ) {}
 
-  public onSignup(form: NgForm): void {
+  onSignup(form: NgForm): void {
     this.submitted = true;
     if (form.valid) {
       this.userDataProvider.signup(this.signup.username);

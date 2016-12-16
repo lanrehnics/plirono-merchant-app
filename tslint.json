@@ -9,21 +9,19 @@
     "arrow-parens": true,
     "adjacent-overload-signatures": true,
     "no-var-requires": true,
-    "no-empty": true,
     "no-invalid-this": true,
     "no-null-keyword": true,
     "no-shadowed-variable": true,
     "no-unused-expression": true,
     "no-unused-new": true,
     "no-reference": true,
-    /* restrict-plus-operands not yet available because @ionic/app-scripts doesn't use latest tslint version */
     //"restrict-plus-operands": true, 
     "switch-default": true,
     "use-isnan": true,
     "label-position": true,
     "eofline": true,
     "no-conditional-assignment": true,
-    "object-literal-key-quotes": [true, "consistent-as-needed"],
+    "object-literal-key-quotes": [ true, "consistent-as-needed"],
     "ordered-imports": [
       true,
       {
@@ -43,7 +41,6 @@
       "member-variable-declaration"
     ],
     "no-inferrable-types": [true, "ignore-params"],
-    "member-access": [true, "check-accessor", "check-constructor"],
     "member-ordering": [
       true,
       { "order":[
